@@ -17,7 +17,7 @@ public class FIFODiskSchedulingMain01 {
 			System.out.println("Input disk access point:");
 			diskAccessPoint[i] = sc.nextInt();
 			
-			if(i == 0){
+			if(i == 0){ 
 				if(startPoint < diskAccessPoint[i]){
 					totalMovement = totalMovement + (diskAccessPoint[i] - startPoint);
 				}else{

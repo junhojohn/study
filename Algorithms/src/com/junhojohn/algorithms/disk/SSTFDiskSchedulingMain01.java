@@ -95,7 +95,7 @@ public class SSTFDiskSchedulingMain01 {
 			}while(count < numOfDiskAccessPoint);
 
 		}
-		
+		 
 		System.out.println("===========================");
 		System.out.print("SSTF Disk Scheduling Priority: [");
 		for(int i = 0 ; i < numOfDiskAccessPoint ; i++){
