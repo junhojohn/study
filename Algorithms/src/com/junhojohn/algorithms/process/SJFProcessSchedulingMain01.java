@@ -1,4 +1,4 @@
-package com.junhojohn.algorithms.main;
+package com.junhojohn.algorithms.process;
 
 import java.util.Scanner;
 
