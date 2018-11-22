@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>input tag test</title>
+		<script language=JavaScript>
+			function view(){
+				var id = document.firstForm.id.value;
+				var pwd = document.firstForm.pwd.value;
+				if(document.firstForm.reading.checked){
+					var hobby = document.firstForm.reading.value;	
+				}
+				if(document.firstForm.baseball.checked){
+					hobby = hobby + "," + document.firstForm.baseball.value;
+				}
+				for(i=0;i<document.firstForm.gender.length;i++){
+					var gender = document.firstForm.gender[i].value;
+				}
+				
+				var str = "id:" + id + "\npwd:" + pwd + "\nhobby:" + hobby + "\ngender:" + gender;
+				alert(str);
+				
+			}
+		</script>
+	</head>
+	<body>
+		<form name=firstForm method=get action="http://127.0.0.1/examples/servlet/a">
+			i &nbsp; d<input type=text size=20 name=id><br>
+			pwd<input type=text size=20 name=pwd><br>
+			취미는?<br>
+			야구<input type=checkbox name=baseball value=baseball checked>
+			독서<input type=checkbox name=reading value=reading><br>
+			성별은?<br>
+			남자<input type=radio name=gender value=male checked>
+			여자<input type=radio name=gender value=female><br>
+			<input type=submit value=전송>
+			<input type=reset value=다시쓰기>
+			<input type=button value="Server로 보낼 내용 확인" onclick=view()>
+		</form>
+	</body>
+</html>
