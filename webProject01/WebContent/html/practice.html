@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script language=JavaScript>
+function view(){
+	var id = document.FirstForm.id.value;
+	var pwd = document.FirstForm.pwd.value;
+	if(document.FirstForm.baseball.checked){
+		var hobby = document.FirstForm.baseball.value;
+	}
+	if(document.FirstForm.reading.checked){
+		hobby = hobby + document.FirstForm.reading.value;
+	}
+	for(i=0;i<document.FirstForm.gender.length;i++){
+		var gender = document.FirstForm.gender[i].value;
+	}
+	
+	alert("id:" + id + "\npwd:" + pwd + "\nhobby:" + hobby + "\ngender:" + gender);	
+}
+</script>
+</head>
+<body>
+	<ul type="disc">
+		<li>학생1</li>
+		<li>학생2</li>
+		<li>학생3</li>
+	</ul>
+	<ol type=I>
+		<li>학생1</li>
+		<li>학생2</li>
+		<li>학생3</li>
+	</ol>
+	<table width=500 height=500 border=2>
+		<tr bgcolor=blue>
+			<td>No</td>
+			<td>Name</td>
+			<td>Gender</td>
+			<td>Comment</td>
+		</tr>
+		<tr align=right>
+			<td>No</td>
+			<td>Name</td>
+			<td>Gender</td>
+			<td>Comment</td>
+		</tr>		
+		<tr valign=bottom>
+			<td>No</td>
+			<td>Name</td>
+			<td>Gender</td>
+			<td>Comment</td>
+		</tr>
+		<tr>
+			<td colspan=4>No</td>
+		</tr>
+	</table>
+	
+	<form name=FirstForm method=get action="http://127.0.0.1/example/servlet/a">
+		ID:<input type=text name=id value="enter id" size=20><br>
+		PWD:<input type=text name=pwd value="enter pwd" size=20><br>
+		
+		What is your hobby?<br>
+		Baseball<input type=checkbox name=baseball value="Baseball" checked><br>
+		Reading<input type=checkbox name=reading value="Reading"><br>
+		
+		What is your gender?<br>
+		Male<input type=radio name=gender value="Male" checked><br>
+		Female<input type=radio name=gender value="Female"><br>
+		
+		What is your favorite sports?<br>
+		<select name=sport value=sport size=3 multiple>
+			<option name=soccer value=soccer>soccer
+			<option name=baseball value=baseball>baseball
+			<option name=basketball value=basketball>basketball
+			<option name=volleyball value=volleyball>volleyball
+		</select><p> 
+		
+		Coment<br>
+		<textarea name=textarea  rows=10 cols=40>Please leave us comment...
+		</textarea>
+		<input type=submit value="Submit">
+		<input type=reset value="Reset">
+		<input type=button value="transmit" onclick=view()>
+	</form>
+</body>
+</html>

@@ -46,14 +46,7 @@ public class LRUVirtualMemoryReplacementMain01 {
 							break;
 						}
 					}
-					try{
-						pageList.set(pageList.indexOf(stack.get(stack.size()-1)), inputList.get(i));							
-					}catch(Exception e){
-						System.out.println();
-					}
-					
-					// stack 초기화
-					stack.clear();
+					pageList.set(pageList.indexOf(stack.get(stack.size()-1)), inputList.get(i));							
 				}				
 			}else{
 				if(pageList.contains(inputList.get(i))){
