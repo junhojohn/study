@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>webProject02</display-name>
+  <servlet>
+    <servlet-name>HelloServletService</servlet-name>
+    <servlet-class>HelloServletService</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>HelloServletDoGet</servlet-name>
+    <servlet-class>HelloServletDoGet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>HelloServletDoPost</servlet-name>
+  	<servlet-class>HelloServletDoPost</servlet-class>
+  </servlet>  
+  <servlet-mapping>
+    <servlet-name>HelloServletService</servlet-name>
+    <url-pattern>/HelloServletService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HelloServletDoGet</servlet-name>
+    <url-pattern>/HelloServletDoGet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HelloServletDoPost</servlet-name>
+  	<url-pattern>/HelloServletDoPost</url-pattern>
+  </servlet-mapping>
+</web-app>
