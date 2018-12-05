@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Registration Form</title>
+		<script language="JavaScript">
+			function view(){
+				var id = document.RegistrationForm.id.value;
+				var pwd = document.RegistrationForm.pwd.value;
+				if(document.RegistrationForm.baseball.checked){
+					var sports = document.RegistrationForm.baseball.value + " ";
+				}
+				if(document.RegistrationForm.basketball.checked){
+					sports = sports + document.RegistrationForm.basketball.value + " "; 
+				}
+				if(document.RegistrationForm.soccer.checked){
+					sports = sports + document.RegistrationForm.soccer.value + " ";
+				}
+				
+				alert("id:" + id + "\n" + "pwd:" + pwd + "\n" + "sports:" + sports);
+				
+			}
+		</script>
+	</head>
+	<body>
+		<form name="RegistrationForm" method=get action="http://127.0.0.1:8080/servlet/aa">
+		ID:<input type=text name="id" value="enter id..." size=20><br>
+		PWD:<input tpye=text name="pwd" value="enter pwd..." size=20><br>
+		What is your favorite sports?
+		Baseball<input type=checkbox name="baseball" value="baseball" checked><br>
+		Basketball<input type=checkbox name="basketball" value="basketball"><br>
+		Soccer<input type=checkbox name="soccer" value="soccer"><br>
+		What is your gender?<br>
+		Male<input type=radio name="gender" value="male"><br>
+		Female<input type=radio name="gender" value="female"><br>
+		<input tpye=button name="transmit" value="transmit" onclick=view()><br>
+		<input type=button name="reset" value="reset">
+		</form>
+	</body>
+</html>
