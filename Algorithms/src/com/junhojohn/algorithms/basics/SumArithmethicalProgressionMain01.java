@@ -1,4 +1,4 @@
-package com.junhojohn.algorithms.progressions;
+package com.junhojohn.algorithms.basics;
 
 public class SumArithmethicalProgressionMain01 {
 

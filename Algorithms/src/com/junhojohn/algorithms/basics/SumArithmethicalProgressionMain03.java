@@ -1,13 +1,13 @@
-package com.junhojohn.algorithms.progressions;
+package com.junhojohn.algorithms.basics;
 
-public class SumArithmethicalProgressionMain02 {
+public class SumArithmethicalProgressionMain03 {
 
 	public static void main(String[] args) {
 		int startNum = 1;
 		int endNum = 100;
 		int sum = 0;
 		for(int i = startNum ; i <= endNum ; i ++){
-			if(i%2 == 0){
+			if(i%2 != 0){
 				sum = sum + i;
 			}
 		}
